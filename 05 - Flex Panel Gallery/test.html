@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <style>
+      div {
+        padding: 20px;
+        border: 1px solid gray;
+      }
+
+      .div1 {
+        background-color: lightblue;
+        width: 50%;
+      }
+
+      .div2, .div3 {
+        background-color: orange;
+      }
+
+      h3 {
+        text-align: center;
+      }
+    </style>
+
+    <div class="div1" onClick="alertName(event, 'Div 1')">
+      <h3>Div 1</h3>
+      <div class="div2" onClick="alertName(event, 'Div 2')">
+          <h3>Div 2</h3>
+          <div class="div3" onClick="alertName(event, 'Div 3')">
+              <h3>Div 3</h3>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const alertName = function(event, name) {
+        event.stopPropagation();
+        alert(name);
+      }
+
+    </script>
+
+  </body>
+</html>
